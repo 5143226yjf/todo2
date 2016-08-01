@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link HREF="CSS/style.css" rel="stylesheet" type="text/css">
+    <script src="node_modules/angular/angular.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<div class="land">
+    <div class="land-sr">
+        <p>用户名：<input type="text" ng-model="name" class="input1" placeholder="请输入中文名"></p>
+        <p>密码：<input type="password" ng-model="password" class="input2" placeholder="请输入6-12位的密码"></p>
+    </div>
+    <div class="correct">
+        <input type="checkbox" name="parameter" id="parameter"  ng-model="checked">
+        <a>是否保存密码？</a>
+    </div>
+    <button type="button" id="btn1" ng-click="load()">登录</button>
+    <button type="button" id="btn2" ng-click="clear()">切换账号</button>
+</div>
+<script src="AJ/land.js"></script>
+</body>
+</html>

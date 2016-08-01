@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>todo</title>
+    <link href="CSS/style2.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script src="node_modules/angular/angular.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="todosCtrl">
+<div class="header">
+    <h1>TODO</h1>
+</div>
+<div class="content">
+    <div class="right">
+        <div class="bt">
+            <h6>标题</h6>
+            <input class="input" id="bt" type="text" ng-model="title">
+        </div>
+        <div class="sj">
+            <h6>时间</h6>
+            <input class="input" id="sj" type="text" ng-model="time">
+        </div>
+        <div class="nr">
+            <h6>内容</h6>
+            <textarea type="text" class="input" id="nr" ng-model="content"></textarea>
+        </div>
+        <div class="an">
+            <button type="button" id="btn1" ng-click="add()">保存</button>
+            <button type="button" id="btn2" ng-click="delete()">清除</button>
+        </div>
+    </div>
+    <div class="left">
+        <div class="top">
+            <h3>今日&nbsp;TODO</h3>
+        </div>
+        <ul>
+            <!--若用x，那么ng-click="gainer(x)"-->
+            <li ng-repeat="x in todos track by $index" ng-click="gainer($index)">
+              <a>{{x.time+" "+ x.title}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="AJ/action.js"> </script>
+</body>
+</html>
