@@ -30,7 +30,7 @@ angular.module('myApp', []).controller('myCtrl', function($scope) {
         if(localStorage.getItem('data')){
             var Data = JSON.parse(localStorage.getItem('data'));
             for(var i = 0; i < Data.name.length; i++) {
-                if ( Data.name[i]=$scope.name) {
+                if ( Data.name[i]==$scope.name) {
                     console.log(Data.name[i]);
                     $scope.password= Data.password[i];
                     return $scope.password;
@@ -41,7 +41,7 @@ angular.module('myApp', []).controller('myCtrl', function($scope) {
             }
         }
     };
-    document.getElementsByName('name').onblur=$scope.c;
+    document.getElementById('name').onblur=$scope.c;
 
     //登录
     $scope.load=function(){
